@@ -1,11 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/question_1_text"
+        android:textSize="30dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/que1btn"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="1000"
+        android:layout_below="@+id/que1btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="68dp"
+        android:id="@+id/que1Edit" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="hello question1!"/>
+        android:id="@+id/que1text"
+        android:text="@string/question_1_answer"
+        android:layout_below="@+id/que1Edit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="102dp"
+        android:textSize="30dp"/>
 
-</LinearLayout>
+</RelativeLayout>
