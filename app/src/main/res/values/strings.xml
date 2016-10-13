@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">HuaweiExam</string>
     <string name="question_1_text">去除重复的字符串</string>
-    <string name="question_2_text">1,3,9,27,81数字组合出1~121中的任一数且大数在前</string>
+    <string name="question_2_text">1,3,9,27,81加减组合1~121中的任一数且大数在前</string>
     <string name="question_3_text">自动售货机</string>
-    <string name="question_1_answer">answer</string>
+    <string name="question_answer">answer</string>
 </resources>

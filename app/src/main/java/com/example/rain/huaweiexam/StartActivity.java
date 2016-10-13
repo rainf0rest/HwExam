@@ -64,8 +64,16 @@ public class StartActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.no1:
                 //Toast.makeText(StartActivity.this, "no1", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(StartActivity.this, QuestionOne.class);
-                startActivity(intent);
+                Intent intent1 = new Intent(StartActivity.this, QuestionOne.class);
+                startActivity(intent1);
+                break;
+            case R.id.no2:
+                Intent intent2 = new Intent(StartActivity.this, QuestionTwo.class);
+                startActivity(intent2);
+                break;
+            case R.id.no3:
+                Intent intent3 = new Intent(StartActivity.this, QuestionThree.class);
+                startActivity(intent3);
                 break;
             default:
                 Toast.makeText(StartActivity.this, "!!!***", Toast.LENGTH_SHORT).show();

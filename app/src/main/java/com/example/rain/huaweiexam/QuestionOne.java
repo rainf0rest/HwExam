@@ -21,7 +21,6 @@ public class QuestionOne extends Activity {
     private EditText input;
     private Handler workhandler;
     char ans[] = new char[1000];
-    String outputString = null;
     String inputString;
 
     class OneThread extends Thread {

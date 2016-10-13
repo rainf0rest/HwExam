@@ -6,10 +6,10 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/question_1_text"
+        android:text="@string/question_2_text"
         android:textSize="30dp"
         android:layout_gravity="center_horizontal"
-        android:id="@+id/que1btn"
+        android:id="@+id/que2btn"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="66dp" />
@@ -17,20 +17,30 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="1000"
-        android:layout_below="@+id/que1btn"
+        android:ems="3"
+        android:inputType="number"
+        android:layout_below="@+id/que2btn"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="68dp"
-        android:id="@+id/que1Edit" />
+        android:id="@+id/que2Edit" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/que1text"
+        android:id="@+id/que2text"
         android:text="@string/question_answer"
-        android:layout_below="@+id/que1Edit"
+        android:layout_below="@+id/que2Edit"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="102dp"
         android:textSize="30dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:id="@+id/que2Reset"
+        android:layout_alignBottom="@+id/que2Edit"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
