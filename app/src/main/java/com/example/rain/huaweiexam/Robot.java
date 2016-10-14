@@ -22,9 +22,9 @@ public class Robot {
     }
 
     public void init() {
-        items[0] = new Item("a", 5, 3);
-        items[1] = new Item("b", 6, 4);
-        items[2] = new Item("c", 7, 5);
+        items[0] = new Item("A", 5, 3);
+        items[1] = new Item("B", 6, 4);
+        items[2] = new Item("C", 7, 5);
         rmbs[0] = new Rmb("1", 15, 1);
         rmbs[1] = new Rmb("2", 10, 2);
         rmbs[3] = new Rmb("3", 5, 5);
