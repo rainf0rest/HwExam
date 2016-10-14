@@ -27,7 +27,7 @@ public class Robot {
         items[2] = new Item("C", 7, 5);
         rmbs[0] = new Rmb("1", 15, 1);
         rmbs[1] = new Rmb("2", 10, 2);
-        rmbs[2] = new Rmb("3", 5, 5);
+        rmbs[2] = new Rmb("5", 5, 5);
     }
 
     public boolean ItemIsEmpty(int i) {
@@ -46,6 +46,10 @@ public class Robot {
         else {
             return false;
         }
+    }
+
+    public void moneyVary(int vary) {
+        money = money + vary;
     }
 
     public Item[] getItems() {

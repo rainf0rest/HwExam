@@ -14,6 +14,14 @@ public class Rmb {
         this.value = v;
     }
 
+    public void decNumber() {
+        number--;
+    }
+
+    public void incNumber() {
+        number++;
+    }
+
     public String getName() {
         return name;
     }

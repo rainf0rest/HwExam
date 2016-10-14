@@ -14,6 +14,14 @@ public class Item {
         this.price = p;
     }
 
+    public void decNumber() {
+        number--;
+    }
+
+    public void incNumber() {
+        number++;
+    }
+
     public String getName() {
         return name;
     }
