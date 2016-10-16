@@ -40,6 +40,7 @@ public class QuestionThree extends Activity {
                 }
                 else {
                     proData.setText("零钱不够，找零失败");
+                    proData.append("\n已投币：" + robot.getMoney());
                 }
             }
         });
@@ -56,14 +57,17 @@ public class QuestionThree extends Activity {
                     if(robot.getItems()[0].getNumber() > 0) {
                         robot.setMoney(lave);
                         robot.getItems()[0].decNumber();
+                        getInfo();
                     }
                     else {
                         proData.setText(sorry2);
+                        proData.append("\n已投币：" + robot.getMoney());
                     }
 
                 }
                 else {
                     proData.setText(sorry1);
+                    proData.append("\n已投币：" + robot.getMoney());
                 }
             }
         });
@@ -76,14 +80,17 @@ public class QuestionThree extends Activity {
                     if(robot.getItems()[1].getNumber() > 0) {
                         robot.setMoney(lave);
                         robot.getItems()[1].decNumber();
+                        getInfo();
                     }
                     else {
                         proData.setText(sorry2);
+                        proData.append("\n已投币：" + robot.getMoney());
                     }
 
                 }
                 else {
                     proData.setText(sorry1);
+                    proData.append("\n已投币：" + robot.getMoney());
                 }
             }
         });
@@ -96,14 +103,17 @@ public class QuestionThree extends Activity {
                     if(robot.getItems()[2].getNumber() > 0) {
                         robot.setMoney(lave);
                         robot.getItems()[2].decNumber();
+                        getInfo();
                     }
                     else {
                         proData.setText(sorry2);
+                        proData.append("\n已投币：" + robot.getMoney());
                     }
 
                 }
                 else {
                     proData.setText(sorry1);
+                    proData.append("\n已投币：" + robot.getMoney());
                 }
             }
         });
@@ -117,6 +127,7 @@ public class QuestionThree extends Activity {
             public void onClick(View v) {
                 robot.moneyVary(1);
                 robot.getRmbs()[0].incNumber();
+                getInfo();
             }
         });
 
@@ -125,6 +136,7 @@ public class QuestionThree extends Activity {
             public void onClick(View v) {
                 robot.moneyVary(2);
                 robot.getRmbs()[1].incNumber();
+                getInfo();
             }
         });
 
@@ -133,6 +145,7 @@ public class QuestionThree extends Activity {
             public void onClick(View v) {
                 robot.moneyVary(5);
                 robot.getRmbs()[2].incNumber();
+                getInfo();
             }
         });
 
@@ -143,6 +156,7 @@ public class QuestionThree extends Activity {
                 super.handleMessage(msg);
                 if (msg.what == 0x256) {
                     getInfo();
+                    proData.append("\n退币成功！");
                 }
             }
         };
@@ -156,7 +170,8 @@ public class QuestionThree extends Activity {
         proData.append("货币"+robot.getRmbs()[0].getName()+"  剩余:"+robot.getRmbs()[0].getNumber()+"\n");
         proData.append("货币"+robot.getRmbs()[1].getName()+"  剩余:"+robot.getRmbs()[1].getNumber()+"\n");
         proData.append("货币"+robot.getRmbs()[2].getName()+"  剩余:"+robot.getRmbs()[2].getNumber()+"\n");
-        proData.append("退币成功，谢谢惠顾");
+        proData.append("已投币：" + robot.getMoney());
+        //proData.append("退币成功，谢谢惠顾");
     }
     //贪心算法
     boolean getChange() {
@@ -173,6 +188,7 @@ public class QuestionThree extends Activity {
             cuslave = cuslave - 1;
             robot.getRmbs()[0].decNumber();
         }
+        robot.setMoney(cuslave);
         if(cuslave == 0) {
             return true;
         }
